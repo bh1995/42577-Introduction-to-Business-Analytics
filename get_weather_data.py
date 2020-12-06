@@ -41,7 +41,7 @@ for i in location_list:
     # location_list = '1.352, 103.819
     try:
         hist_weather_data = retrieve_hist_data(api_key,
-                                        location_list,
+                                        i,
                                         start_date,
                                         end_date,
                                         frequency,
@@ -49,7 +49,7 @@ for i in location_list:
                                         export_csv = True,
                                         store_df = True)
     except:
-        continue
+        pass
 
 
 type(hist_weather_data)
